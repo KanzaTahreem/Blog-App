@@ -137,7 +137,6 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Processing data in models.
 - Views.
 - Forms
 - Validations, Model specs, and n+1 problems.
