@@ -56,4 +56,8 @@ RSpec.describe User, type: :model do
     subject.posts_counter = 0
     expect(subject).to be_valid
   end
+
+  it "should return 3 recent posts" do
+    expect(subject.recent_posts).to eq(subject.posts.order(created_at: :desc).limit(3))
+  end
 end
