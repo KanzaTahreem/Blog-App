@@ -7,22 +7,17 @@ RSpec.describe 'UsersController', type: :request do
   before { subject.save } 
 
   describe "GET #index" do
-    before(:example) { get users_path } # get(:index)
+    before(:example) { get users_path }
+
     it "returns http success" do
-      # get '/users'
-      # get users_path
       expect(response).to have_http_status(:ok)
     end
 
     it "renders the correct template" do
-      # get '/users'
-      # get users_path
       expect(response).to render_template(:index)
     end
 
     it "includes the correct placeholder text in the response body" do
-      # get '/users'
-      # get users_path
       expect(response.body).to include("Hello from all users page!")
     end
   end
@@ -30,21 +25,16 @@ RSpec.describe 'UsersController', type: :request do
   
   describe "GET #show" do
     before(:example) { get user_path(id: 1) }
+
     it "returns http success" do
-      # get '/users/1'
-      # get user_path(id: 1)
       expect(response).to have_http_status(:ok)
     end
 
     it "renders the correct template" do
-      # get '/users/1'
-      # get user_path(id: 1)
       expect(response).to render_template(:show)
     end
 
     it "includes the correct placeholder text in the response body" do
-      # get '/users/1'
-      # get user_path(id: 1)
       expect(response.body).to include("Hello from a selected user page!")
     end
   end
