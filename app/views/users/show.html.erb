@@ -5,4 +5,8 @@
     <h3>Bio</h3>
     <p><%= @user.bio %></p>
   </div>
+
+  <% @recent_posts.each do |post| %>
+    <%= render partial: 'shared/post', locals: { post: post } %>
+  <% end %>
 </section> 
