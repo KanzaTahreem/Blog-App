@@ -1,0 +1,35 @@
+.post_details_container {
+  gap: 1em;
+  padding: 1em;
+  display: flex;
+  margin: 1.4em 0;
+  border: 3px solid;
+  flex-direction: column;
+}
+
+.all_posts_container {
+  padding: 4em 6em;
+}
+
+.post_stats {
+  gap: 2em;
+  display: flex;
+  align-self: flex-end;
+}
+
+.all_posts_container > .post_details_container {
+  margin-bottom: 0.2em;
+}
+
+.recent_comments_container {
+  gap: 0.4em;
+  display: flex;
+  padding: 1em;
+  border: 3px solid;
+  flex-direction: column;
+}
+
+.comment_details_container {
+  gap: 1em;
+  display: flex;
+}
