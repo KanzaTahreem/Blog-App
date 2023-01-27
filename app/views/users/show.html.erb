@@ -1,1 +1,8 @@
-<section>Hello from a selected user page!</section>
+<section class="single_users_container">
+  <%= render partial: "shared/user", locals: {user: @user || "No users found"} %>
+
+  <div class="user_bio">
+    <h3>Bio</h3>
+    <p><%= @user.bio %></p>
+  </div>
+</section> 
