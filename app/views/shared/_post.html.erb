@@ -1,0 +1,8 @@
+<div class="post_details_container">
+  <h2 class="post_title"> Post # <%= post.id %> </h2>
+  <%= truncate(post.text, length: 250, omission: "...") %>
+  <div class="post_stats">
+    <p>Comments: <%= post.comments_counter || 0 %></p>
+    <p>Likes: <%= post.likes_counter || 0 %></p>
+  </div>
+</div>
