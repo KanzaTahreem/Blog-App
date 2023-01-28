@@ -1,1 +1,5 @@
-<section>Hello from all users page!</section> 
+<section class="all_users_container">
+  <div>
+    <%= render partial: "shared/user", collection: @users, as: :user || ">No users found" %>
+  </div>
+</section> 

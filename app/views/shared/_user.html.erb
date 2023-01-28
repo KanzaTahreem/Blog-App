@@ -1,0 +1,9 @@
+<div class="user_details_container">
+  <div class="user_img">
+    <img src=<%= user.photo%> alt="<%= user.name %>'s photo">
+  </div>
+  <div class="user_highlight">
+    <h2><%= link_to  user.name, user_path(user) %></h2>
+    <p>Number of posts: <%= user.posts.count || 0 %></p>
+  </div>
+</div>
