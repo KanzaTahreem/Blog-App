@@ -7,7 +7,7 @@
   </div>
 
   <% @recent_posts.each do |post| %>
-    <%= render partial: 'shared/post', locals: { post: post } %>
+    <%= render partial: 'shared/post', locals: { post: post, show_full_post: false } %>
   <% end %>
 
   <button type="button" class="btn"><%= link_to "See all Posts", user_posts_path(@user) %></button> 
