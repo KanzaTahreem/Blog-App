@@ -10,11 +10,5 @@
     <% end %>
   </div>
   <% end %>
-  <% @total_pages.times do |i| %>
-    <% if i == @current_page %>
-      <%= link_to "#{i + 1}", user_posts_path(user_id: @user, offset: i * 5), class: "active" %>
-    <% else %>
-      <%= link_to "#{i + 1}", user_posts_path(user_id: @user, offset: i * 5) %>
-    <% end %>
-  <% end %>
+  <button type="button" class="btn">Pagination</button> 
 </section>
