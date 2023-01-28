@@ -60,3 +60,36 @@
   display: flex;
   margin-top: 1em;
 }
+
+.new_post_container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  gap: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form_title,
+.form_text {
+  width: 60vw;
+  border: 3px solid;
+}
+
+.form_title {
+  height: 10vh;
+}
+
+.form_text {
+  height: 50vh;
+}
+
+.form_title::placeholder,
+.form_text::placeholder {
+  padding: 1em;
+}
