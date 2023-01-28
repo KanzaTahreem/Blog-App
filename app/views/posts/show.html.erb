@@ -5,4 +5,5 @@
       <%= render partial: 'shared/comment', locals: { comment: comment } %>
     <% end %>
   </div>
+  <button type="button" class="create_post_btn btn"><%= link_to "Add a new comment", new_user_post_comment_path(user_id: @post.author.id, post_id: @post.id) %></button>
 </section>
