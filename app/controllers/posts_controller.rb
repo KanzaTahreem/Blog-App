@@ -21,7 +21,7 @@ class PostsController < ApplicationController
 
     respond_to do |_format|
       if @post.save
-        redirect_to user_posts_path(current_user) 
+        redirect_to user_posts_path(current_user)
       else
         render :new
       end
