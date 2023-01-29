@@ -9,25 +9,25 @@ class PostsController < ApplicationController
     @post = @user.posts.find(params[:id])
   end
 
-  def new 
+  def new
     @post = Post.new
   end
 
   def create
-    puts "Current User"
-    
-    @post = Post.new(post_params) 
+    puts 'Current User'
+
+    @post = Post.new(post_params)
     @post.author = current_user
 
-    respond_to do |format|
+    respond_to do |_format|
       if @post.save
-        redirect_to user_posts_path(current_user)
+        redirect_to user_posts_path(current_user) 
       else
-         render :new
+        render :new
       end
     end
   end
-  
+
   private
 
   def post_params
