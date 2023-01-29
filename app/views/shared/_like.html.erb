@@ -1,0 +1,5 @@
+<section class="new_like">
+  <%= form_with model: @like, url: user_post_likes_path(user_id: @user, post_id: @post), local: true do |form| %>
+    <%= form.submit "Like", class: "like_btn btn" %>
+  <% end %>
+</section>

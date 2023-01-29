@@ -94,3 +94,7 @@ form {
 .form_text::placeholder {
   padding: 1em;
 }
+
+.like_btn {
+  align-self: flex-end;
+}
