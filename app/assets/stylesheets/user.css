@@ -59,7 +59,6 @@
 
 .btn {
   display: flex;
-  margin: 1em auto;
   border: 3px solid;
   padding: 1em 2.5em;
   box-shadow: 3px 3px;
@@ -70,4 +69,10 @@
 .btn a {
   font-size: 1.2em;
   font-weight: 700;
+}
+
+.btn_container {
+  display: flex;
+  justify-content: center;
+  gap: 5em;
 }
