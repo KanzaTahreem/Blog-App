@@ -1,3 +1,4 @@
+<%= render partial: "shared/error" %>
 <section class="all_posts_container">
   <%= render partial: "shared/user", locals: {user: @user || "No users found"} %>
   <% @posts.each do |post| %>

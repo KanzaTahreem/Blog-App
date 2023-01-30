@@ -16,13 +16,12 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.author = current_user
-
-    respond_to do |_format|
-      if @post.save
-        redirect_to user_posts_path(current_user)
-      else
-        render :new
-      end
+    
+    if @post.save
+      redirect_to user_posts_path(current_user), notice: 'Post created successfully'
+    else
+      flash.now[:alert] = @post.errors.full_messages.first if @post.errors.any?
+      render :new, status: 400
     end
   end
 
