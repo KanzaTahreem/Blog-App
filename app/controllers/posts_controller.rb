@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :find_user, only: [:index, :show]
+  before_action :find_user, only: [:index, :new, :show]
 
   def index
     @posts = @user.posts.order(created_at: :asc)

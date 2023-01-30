@@ -11,6 +11,7 @@
   <% end %>
 
   <div class="btn_container">
+    <button type="button" class="back_btn btn"><%= link_to "Go back to users", users_path(@user) %></button>
     <button type="button" class="btn"><%= link_to "See all Posts", user_posts_path(@user) %></button> 
     <button type="button" class="create_post_btn btn"><%= link_to "Create Post", new_user_post_path(@user) %></button>
   </div>
