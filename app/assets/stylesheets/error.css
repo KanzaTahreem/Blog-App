@@ -1,0 +1,9 @@
+.flash-notice {
+  opacity: 0;
+  animation: fadeout 5s;
+}
+
+@keyframes fadeout {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}

@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :set_post, only: %i[new create]
+
   def new
     @comment = Comment.new
   end
@@ -6,19 +8,21 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     @comment.author = current_user
-    @comment.post = Post.find(params[:post_id])
+    @comment.post = @post
 
-    respond_to do |_format|
-      if @comment.save
-
-        redirect_to user_post_path(user_id: params[:user_id], id: params[:post_id])
-      else
-        render :new
-      end
+    if @comment.save
+      redirect_to user_post_path(user_id: @post.author.id, id: @post.id), notice: 'Comment added successfully'
+    else
+      flash.now[:alert] = @comment.errors.full_messages.first if @comment.errors.any?
+      render :new, status: 400
     end
   end
 
   private
+
+  def set_post
+    @post = Post.find(params[:post_id])
+  end
 
   def comment_params
     params.require(:comment).permit(:text)

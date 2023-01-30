@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
+  before_action :find_user, only: %i[index new show]
+
   def index
-    @user = User.find(params[:user_id])
     @posts = @user.posts.order(created_at: :asc)
   end
 
   def show
-    @user = User.find(params[:user_id])
     @post = @user.posts.find(params[:id])
   end
 
@@ -14,21 +14,22 @@ class PostsController < ApplicationController
   end
 
   def create
-    puts 'Current User'
-
     @post = Post.new(post_params)
     @post.author = current_user
 
-    respond_to do |_format|
-      if @post.save
-        redirect_to user_posts_path(current_user)
-      else
-        render :new
-      end
+    if @post.save
+      redirect_to user_posts_path(current_user), notice: 'Post created successfully'
+    else
+      flash.now[:alert] = @post.errors.full_messages.first if @post.errors.any?
+      render :new, status: 400
     end
   end
 
   private
+
+  def find_user
+    @user = User.find(params[:user_id])
+  end
 
   def post_params
     params.require(:post).permit(:title, :text)

@@ -1,3 +1,4 @@
+<%= render partial: "shared/error" %>
 <section class="full_post_container">
   <%= render partial: "shared/like", locals: { like: Like.new, post_id: @post.id, user_id: @post.author.id } %>
   <%= render partial: 'shared/post', locals: { post: @post, show_full_post: true } %>
@@ -7,4 +8,5 @@
     <% end %>
   </div>
   <button type="button" class="create_post_btn btn"><%= link_to "Add a new comment", new_user_post_comment_path(user_id: @post.author.id, post_id: @post.id) %></button>
+  <button type="button" class="back_btn btn"><%= link_to "Go back to posts page", user_posts_path(@user) %></button>
 </section>
