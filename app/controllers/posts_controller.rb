@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :find_user, only: [:index, :new, :show]
+  before_action :find_user, only: %i[index new show]
 
   def index
     @posts = @user.posts.order(created_at: :asc)
@@ -16,7 +16,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.author = current_user
-    
+
     if @post.save
       redirect_to user_posts_path(current_user), notice: 'Post created successfully'
     else
