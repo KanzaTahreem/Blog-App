@@ -1,14 +1,13 @@
-
 require 'rails_helper'
 
 RSpec.describe 'User Index Page', type: :feature do
   before :each do
-    @user = User.create(name: 'Doraemon & Nobita', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Best friends', posts_counter: 12)
+    @user = User.create(name: 'Doraemon & Nobita', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                        bio: 'Best friends', posts_counter: 12)
   end
 
   describe 'User index page' do
     before(:each) { visit users_path }
-
 
     it 'displays a container for the users' do
       expect(page).to have_css('section.all_users_container')
@@ -38,4 +37,3 @@ RSpec.describe 'User Index Page', type: :feature do
     end
   end
 end
-

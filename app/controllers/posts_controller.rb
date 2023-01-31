@@ -29,7 +29,7 @@ class PostsController < ApplicationController
 
   def find_user
     # @user = User.find(params[:user_id])
-    @user = User.includes(:posts, posts:[:comments, comments:[:author]]).find(params[:user_id])
+    @user = User.includes(:posts, posts: [:comments, { comments: [:author] }]).find(params[:user_id])
   end
 
   def post_params
