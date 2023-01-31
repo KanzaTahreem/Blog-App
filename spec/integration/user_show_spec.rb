@@ -35,6 +35,8 @@ RSpec.describe 'User Index Page', type: :feature do
 
     it 'shows the first 3 posts of the user' do
       @user.recent_posts.each do |post|
+        expect(page).to have_content(post.id)
+        expect(page).to have_content(post.title)
         expect(page).to have_content(post.text)
       end
     end

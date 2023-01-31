@@ -1,6 +1,6 @@
 <%= link_to user_post_path(user_id: post.author.id, id: post.id), class: "post_partial" do %>
   <div class="post_details_container">
-    <h2 class="post_title"> Post # <%= post.id %> </h2>
+    <h2 class="post_title"> Post # <%= post.id %>: <%= post.title %> </h2>
     <% if (show_full_post) %>
       <p class="post_text"><%= post.text %></p>
     <% else %>
