@@ -1,5 +1,5 @@
 <section class="single_users_container">
-  <%= render partial: "shared/user", locals: {user: @user || "No users found"} %>
+  <%= render partial: "shared/user", locals: { user: @user } %>
 
   <div class="user_bio">
     <h3>Bio</h3>
@@ -11,8 +11,8 @@
   <% end %>
 
   <div class="btn_container">
-    <button type="button" class="back_btn btn"><%= link_to "Go back to users", users_path(@user) %></button>
-    <button type="button" class="btn"><%= link_to "See all Posts", user_posts_path(@user) %></button> 
-    <button type="button" class="create_post_btn btn"><%= link_to "Create Post", new_user_post_path(@user) %></button>
+    <button type="button" class="back_btn btn"><%= link_to "Go back to users", users_path %></button>
+    <button type="button" class="btn"><%= link_to "See all Posts", user_posts_path(user_id: @user.id) %></button> 
+    <button type="button" class="create_post_btn btn"><%= link_to "Create Post", new_user_post_path(user_id: @user.id) %></button>
   </div>
 </section> 
