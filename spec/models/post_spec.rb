@@ -1,10 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  author = User.create(name: 'Tom & Jerry', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Best friends')
   subject do
-    Post.new(title: 'Physics', text: 'This is not my first post', comments_counter: 10, likes_counter: 10,
-             author: author)
+    @user = User.create(name: 'Tom & Jerry', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Best friends',
+                        posts_counter: 12)
+    @post = Post.create(title: 'Physics', text: 'This is not my first post', comments_counter: 10, likes_counter: 10,
+                        author: @user)
   end
 
   before { subject.save }
