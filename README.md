@@ -15,7 +15,6 @@
     - [Usage ](#usage-)
     - [Run tests](#run-tests)
     - [Deployment](#deployment)
-  - [👥 Author ](#-author-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
@@ -58,6 +57,8 @@ The **Blog app** is a classic example of a blog website. It is a fully functiona
 - Use RubyGems as a software package system.
 - Use database migration files to maintain database schema.
 - Understand ORM
+- Update Views and add forms
+- Validations, Model specs, and n+1 problems.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -108,7 +109,7 @@ To run the project, execute the following command:
 To run all tests, including unit and integration tests, run the following command:
 
 ```
-  rails test:all
+  rspec
 ```
 
 ### Deployment
@@ -123,12 +124,24 @@ You can deploy this project using:
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
-
-## 👥 Author <a name="authors"></a>
-
+- ## 👥 Authors <a name="authors"></a>
+ 
+👤 **Kanza Tahreem**
 - GitHub: [@KanzaTahreem](https://github.com/KanzaTahreem)
 - Twitter: [@kanza_tahreem](https://twitter.com/kanza_tahreem)
-- LinkedIn: [Kanza Tahreem](https://www.linkedin.com/in/kanza-tahreem/)
+- LinkedIn: [kanza-tahreem](https://www.linkedin.com/in/kanza-tahreem/)
+  
+👤 **Camilo Vela**
+
+- GitHub: [@camilovelag](https://github.com/camilovelag)
+- Twitter: [@camilovelag](https://twitter.com/camilovelag)
+- LinkedIn: [camilovelag](https://linkedin.com/in/camilovelag)
+
+👤 **Danys Linares**
+
+- GitHub: [@d4nQw3rty](https://github.com/d4nQw3rty)
+- Twitter: [@Danys_Linares](https://twitter.com/Danys_Linares)
+- LinkedIn: [danys-linares](www.linkedin.com/in/danys-linares)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -137,9 +150,6 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- Views.
-- Forms
-- Validations, Model specs, and n+1 problems.
 - Add Devise.
 - Add authorization rules.
 - Integration specs for Views.
