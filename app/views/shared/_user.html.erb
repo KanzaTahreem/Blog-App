@@ -1,6 +1,10 @@
 <div class="user_details_container">
   <div class="user_img">
-    <img src=<%= user.photo%> alt="<%= user.name %>'s photo">
+    <% if user.photo? %>
+      <img src=<%= user.photo%> alt="<%= user.name %>'s photo">
+    <% else %>
+        <%= image_tag "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" %>
+    <% end %>
   </div>
   <div class="user_highlight">
     <h2><%= link_to  user.name, user_path(user) %></h2>
