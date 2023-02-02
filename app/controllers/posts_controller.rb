@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   before_action :find_user, only: %i[index new show]
 
   def index
