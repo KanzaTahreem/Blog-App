@@ -6,6 +6,12 @@ class ApplicationController < ActionController::Base
   rescue_from CanCan::AccessDenied do | exception |
     redirect_to root_url, alert: exception.message
   end
+
+  
+  def after_sign_out_path_for scope
+    p scope
+    new_user_session_path
+  end
   
   protected
 
