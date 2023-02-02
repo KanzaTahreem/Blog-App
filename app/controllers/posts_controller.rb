@@ -27,6 +27,17 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    
+    if @post.destroy
+      redirect_to user_posts_path(current_user), notice: 'Post deleted successfully'
+    else
+      flash.new[:alert] = @post.errors.full_messages.first if @post.errors.any?
+      render :show, status: 400
+    end
+  end
+
   private
 
   def find_user
