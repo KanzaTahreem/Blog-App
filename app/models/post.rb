@@ -4,6 +4,8 @@ class Post < ApplicationRecord
   has_many :likes, class_name: 'Like', foreign_key: 'post_id'
 
   after_save :update_posts_counter
+  after_destroy :delete_posts_counter
+  
 
   validates :text, presence: true
   validates :title, presence: true, length: { in: 3..250 }
@@ -18,5 +20,9 @@ class Post < ApplicationRecord
 
   def update_posts_counter
     author.increment!(:posts_counter)
+  end
+
+  def delete_posts_counter
+    author.decrement!(:posts_counter)
   end
 end
