@@ -5,7 +5,6 @@ class Post < ApplicationRecord
 
   after_save :update_posts_counter
   after_destroy :delete_posts_counter
-  
 
   validates :text, presence: true
   validates :title, presence: true, length: { in: 3..250 }
