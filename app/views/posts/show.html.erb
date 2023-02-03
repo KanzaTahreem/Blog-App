@@ -5,6 +5,9 @@
   <div class="full_comments_container">
     <% @post.comments.each do |comment| %>
       <%= render partial: 'shared/comment', locals: { comment: comment } %>
+      <% if can? :delete, comment %>
+      <button type="button" class="delete_btn btn"><%= link_to "Delete Comment", user_post_comment_path(user_id: comment.author.id, post_id: comment.post.id, id: comment.id), data: { turbo_method: :delete } %></button>
+    <% end %>
     <% end %>
   </div>
   <button type="button" class="create_post_btn btn"><%= link_to "Add a new comment", new_user_post_comment_path(user_id: @post.author.id, post_id: @post.id) %></button>
