@@ -8,7 +8,16 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api do
+    post 'login', to: 'login#index'
+    resources :users, only: [] do
+      resources :posts, only: [:index] do
+        resources :comments, only: [:index, :create]
+      end
+    end
+  end
+
   # Defines the root path route ("/")
-  # root "articles#index"
+  # root "articles#index" 
   root 'users#index', as: 'home'
 end
