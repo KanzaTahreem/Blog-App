@@ -3,14 +3,14 @@ require 'jwt'
 class Api::CommentsController < Api::ApplicationController
   load_and_authorize_resource
 
-  before_action :find_post, only: [:index, :create]
+  before_action :find_post, only: %i[index create]
 
   def index
     if @post
       @comments = Comment.where(post_id: params[:post_id])
       render json: { status: 'Success', data: @comments }
     else
-      render json: { status: "Failure", error: "Post Not Found" }
+      render json: { status: 'Failure', error: 'Post Not Found' }
     end
   end
 
@@ -22,7 +22,7 @@ class Api::CommentsController < Api::ApplicationController
     if @comment.save
       render json: { status: 'Success', data: @comment }
     else
-      render json: { status: 'Failure', error: @comment.errors.full_messages}
+      render json: { status: 'Failure', error: @comment.errors.full_messages }
     end
   end
 
