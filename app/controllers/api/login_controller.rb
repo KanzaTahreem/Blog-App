@@ -17,7 +17,7 @@ class Api::LoginController < Api::ApplicationController
       render json: { name: 'Fail' }
     end
   end
-  
+
   class << self
     attr_reader :hmac_secret
   end
