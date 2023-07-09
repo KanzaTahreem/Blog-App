@@ -1,7 +1,6 @@
 
 
-.login_container,
-.sign_up_container {
+.container {
   gap: 0.5rem;
   width: 50vw;
   margin: auto;
@@ -12,15 +11,15 @@
   justify-content: center;
 }
 
-.login_container form,
-.sign_up_container form {
+.container form,
+.container form {
   align-items: center;
   width: 100%;
   gap: 1rem;
 }
 
-.sign_up_container > div ,
-.login_container > div {
+.container > div ,
+.container > div {
   width: 54%;
   margin: 0 auto;
 }
@@ -31,49 +30,50 @@
   text-decoration: underline;
 }
 
-.login_container input::placeholder,
-.sign_up_container input::placeholder {
+.container input::placeholder,
+.container input::placeholder {
   letter-spacing: 1px;
 }
 
-.login_container input,
-.sign_up_container input {
+.container input,
+.container input {
   padding: 10px;
   border-radius: 6px;
   outline: none;
   border: 1px solid lightgray;
 }
 
-.login_container input:focus,
-.sign_up_container input:focus {
+.container input:focus,
+.container input:focus {
   border: 1px solid var(--lapis-lazuli);
 }
 
 .login_btn,
-.signup_btn {
+.signup_btn,
+.reset_btn {
   background: var(--lapis-lazuli);
   color: var(--alice-blue);
   border: none;
-  border-radius: 6px;
   margin: 2em 0;
 }
 
 .login_btn:hover,
-.signup_btn:hover {
+.signup_btn:hover,
+.reset_btn:hover {
   cursor: pointer;
   box-shadow: 5px 6px 28px rgb(31 110 140 / 10%), 2px 5px 10px rgb(31 110 140 / 25%);
 }
 
 
-.sign_up_container .new_user div,
-.login_container .new_user div  {
+.container .new_user div,
+.container .new_user div  {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.sign_up_container h2,
-.login_container h2 {
+.container h2,
+.container h2 {
   font-size: 2.3rem;
   font-weight: 600;
   letter-spacing: 1px;
