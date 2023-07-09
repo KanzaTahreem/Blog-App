@@ -1,58 +1,86 @@
+.all_users_container,
+.single_users_container {
+  margin: 4rem auto;
+  background: white;
+  padding: 2rem;
+  box-shadow: 1px 1px 9px lightgray;
+}
+
 .all_users_container {
-  padding: 4em 6em;
+  width: 60vw;
+}
+
+.single_users_container {
+  width: 65vw;
 }
 
 .all_users_container > div {
   display: grid;
   gap: 2em;
+  /* width: 70%; */
+  margin: auto;
 }
 
 .user_details_container {
+  gap: 2rem;
   display: flex;
   width: 100%;
-  gap: 3em;
-  height: 18vh;
   align-items: center;
+  justify-content: center;
+  width: 85%;
+  margin: auto;
+  gap: 3rem;
 }
 
 .user_img {
-  border: 3px solid;
   text-align: center;
   display: flex;
   height: 100%;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  /* flex: 0.5; */
+  justify-content: center;
 }
 
 .user_img img {
-  width: 100%;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
 }
 
 .user_highlight {
   width: 100%;
   height: 100%;
   display: flex;
-  padding: 1em 2em;
-  border: 3px solid;
-  flex-direction: column;
+  /* padding: 1rem; */
+  align-items: center;
+  /* gap: 2rem; */
+  flex: 1;
 }
 
-.user_highlight h2 {
-  font-size: 2.5em;
+.user_highlight > div {
+  flex: 3;
 }
 
-.user_highlight p {
-  font-size: 1.5em;
-  align-self: flex-end;
+.user_highlight h2 a {
+  font-size: inherit;
+  text-transform: capitalize;
+  color: var(--lapis-lazuli);
 }
 
-.single_users_container {
-  padding: 4em 6em;
+.view_user {
+  background: var(--lapis-lazuli);
+  padding: 0.5rem 2rem;
+  border-radius: 6px;
+  color: var(--alice-blue);
 }
+
 
 .user_bio {
   gap: 1.3em;
   display: flex;
   margin: 2em 0;
-  border: 3px solid;
   padding: 1.8em 1.2em;
   flex-direction: column;
 }

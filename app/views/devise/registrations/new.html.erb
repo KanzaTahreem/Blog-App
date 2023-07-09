@@ -1,4 +1,7 @@
 <main class="sign_up_container container">
+  <% if notice.present? %>
+    <p class="notice"><%= notice %></p>
+  <% end %>
   <% if alert.present? %>
     <p class="alert"><%= alert %></p>
   <% end %>

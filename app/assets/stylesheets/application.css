@@ -19,12 +19,15 @@
   --mantis: #82CC6B;
   --crimson: #a51c30;
   --spanish-pink: #fcc2c287;
+  --tea-green: #d0f5be;
+  --timber-wolf: #dbd5d53d;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
   color: var(--eagle-green);
+  background: var(--timber-wolf)
 }
 
 h1,
@@ -44,4 +47,22 @@ li {
 
 a {
   text-decoration: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+}
+
+header {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  justify-content: center;
+  background: white;
+  box-shadow: 1px 1px 9px lightgray;
+}
+
+header span {
+  border: 1px solid lightgray;
 }
