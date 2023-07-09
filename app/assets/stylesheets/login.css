@@ -1,91 +1,97 @@
-.log_container {
+
+
+.login_container,
+.sign_up_container {
+  gap: 0.5rem;
+  width: 50vw;
+  margin: auto;
+  min-height: 90vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  margin-top: 5%;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.log_container form {
-  display: flex;
-  flex-direction: column;
+.login_container form,
+.sign_up_container form {
   align-items: center;
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-  gap: 2em;
+  width: 100%;
+  gap: 1rem;
 }
 
-.sign_up_container > div {
-  width: 80%;
+.sign_up_container > div ,
+.login_container > div {
+  width: 54%;
   margin: 0 auto;
 }
 
+.login_text a,
+.signup_text a {
+  color: var(--azure);
+  text-decoration: underline;
+}
+
+.login_container input::placeholder,
+.sign_up_container input::placeholder {
+  letter-spacing: 1px;
+}
+
+.login_container input,
 .sign_up_container input {
   padding: 10px;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid lightgray;
 }
 
-.log_container form div {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: center;
-  gap: 1em;
-}
-
-.log_container form div input {
-  width: 100%;
-  padding: 10px;
-}
-
-#user_password,
-#user_email,
-#user_name,
-#user_password_confirmation {
-  border: 2px solid;
-  box-shadow: 1px 1px;
-}
-
-#user_remember_me {
-  width: initial;
+.login_container input:focus,
+.sign_up_container input:focus {
+  border: 1px solid var(--lapis-lazuli);
 }
 
 .login_btn,
 .signup_btn {
-  box-shadow: 3px 3px;
+  background: var(--lapis-lazuli);
+  color: var(--alice-blue);
+  border: none;
+  border-radius: 6px;
   margin: 2em 0;
 }
 
-.sign_up_container {
-  padding: 1em;
+.login_btn:hover,
+.signup_btn:hover {
+  cursor: pointer;
+  box-shadow: 5px 6px 28px rgb(31 110 140 / 10%), 2px 5px 10px rgb(31 110 140 / 25%);
+}
+
+
+.sign_up_container .new_user div,
+.login_container .new_user div  {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 5%;
-}
-
-.sign_up_container h2 {
-  display: none;
-}
-
-.sign_up_container form {
-  align-items: center;
   width: 100%;
 }
 
-form > .actions {
-  align-self: center;
+.sign_up_container h2,
+.login_container h2 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.supporting_text {
+  padding-bottom: 1.75rem;
 }
 
 .new_user {
   gap: 1em;
 }
 
-.sign_up_container .new_user div {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+form > .actions {
+  align-self: center;
 }
 
 .sign_up_container label {
-  display: none;
+  display: none;;
 }
+

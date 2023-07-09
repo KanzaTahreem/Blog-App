@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -6,11 +9,39 @@
   padding: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+  --eagle-green: #164b60;
+  --lapis-lazuli: #1F6E8C;
+  --sea-serpent: #4fc0d0;
+  --alice-blue: #F9EDEC;
+  --poseidon: #133955;
+  --azure: #068fff;
+  --mantis: #82CC6B;
+  --crimson: #a51c30;
+  --spanish-pink: #fcc2c287;
 }
 
-a:active {
+body {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  color: var(--eagle-green);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--poseidon);
+}
+
+p,
+a,
+ul,
+li {
   color: inherit;
+  font-size: 0.8rem;
+}
+
+a {
+  text-decoration: none;
 }

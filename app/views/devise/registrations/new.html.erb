@@ -1,29 +1,30 @@
 <main class="sign_up_container">
+  <% if alert.present? %>
+    <p class="alert"><%= alert %></p>
+  <% end %>
   <h2>Sign up</h2>
+  <p class="supporting_text">Let's get started with a new account</p>
   <div>
     <%= form_for(resource, as: resource_name,  data: {turbo: false}, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
       <div class="field">
-        <%= f.label :name, "Username" %><br />
-        <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Username" %>
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: "Name" %>
       </div>
 
       <div class="field">
-        <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
       </div>
-      
+
       <div class="field">
         <%= f.label :password %>
         <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
+        <em><% @minimum_password_length %></em>
+        <% end %>
         <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
       </div>
 
       <div class="field">
-        <%= f.label :password_confirmation %><br />
         <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirm Password" %>
       </div>
 
