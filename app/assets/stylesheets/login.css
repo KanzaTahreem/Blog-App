@@ -55,6 +55,7 @@
   color: var(--alice-blue);
   border: none;
   margin: 2em 0;
+  letter-spacing: 1px;
 }
 
 .login_btn:hover,
