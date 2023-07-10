@@ -9,7 +9,7 @@
   <div class="user_highlight">
     <div>
       <h2><%= link_to  user.name, user_path(user) %></h2>
-      <p>Number of posts: <%= user.posts_counter || 0 %></p>
+      <p>Total posts: <%= user.posts_counter || 0 %></p>
     </div>
     <% if current_page?(users_path) %>
       <button>

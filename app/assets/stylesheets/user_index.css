@@ -10,21 +10,15 @@
   width: 60vw;
 }
 
-.single_users_container {
-  width: 65vw;
-}
 
 .all_users_container > div {
   display: grid;
   gap: 2em;
-  /* width: 70%; */
   margin: auto;
 }
 
 .user_details_container {
-  gap: 2rem;
   display: flex;
-  width: 100%;
   align-items: center;
   justify-content: center;
   width: 85%;
@@ -77,13 +71,6 @@
 }
 
 
-.user_bio {
-  gap: 1.3em;
-  display: flex;
-  margin: 2em 0;
-  padding: 1.8em 1.2em;
-  flex-direction: column;
-}
 
 .btn {
   display: flex;
@@ -101,6 +88,6 @@
 
 .btn_container {
   display: flex;
-  justify-content: center;
-  gap: 5em;
+  gap: 0.5rem;
+  justify-content: flex-start;
 }

@@ -1,0 +1,52 @@
+.single_users_container {
+  width: 65vw;
+}
+
+.single_users_container > div {
+  width: 85%;
+  margin: 1rem auto 4rem auto;
+}
+
+.single_users_container .user_details_container {
+  width: 100%;
+  gap: 1rem;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+.single_user_headline {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.user_bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.single_users_container .user_highlight {
+  width: auto;
+  flex: none;
+}
+
+.single_users_container .user_highlight > div {
+  flex: none
+}
+
+.single_users_container .user_img,
+.single_users_container .user_img img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.single_users_container .user_highlight h2 a {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.single_users_container .user_highlight p {
+  font-size: 0.7rem;
+  font-style: italic;
+}

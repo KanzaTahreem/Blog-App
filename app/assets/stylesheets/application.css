@@ -21,6 +21,11 @@
   --spanish-pink: #fcc2c287;
   --tea-green: #d0f5be;
   --timber-wolf: #dbd5d53d;
+  --orange-yellow: #ffc95f;
+  --cambridge-blue: #aac8a7;
+  --pear: #BFDB38;
+  --coral: #ff8551;
+  --mountain-majesty: #9f73ab;
 }
 
 body {
@@ -52,6 +57,13 @@ a {
 button {
   border: none;
   background: transparent;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  color: var(--alice-blue);
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 header {

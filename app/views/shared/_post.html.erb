@@ -1,14 +1,16 @@
 <%= link_to user_post_path(user_id: post.author.id, id: post.id), class: "post_partial" do %>
   <div class="post_details_container">
-    <h2 class="post_title"> Post # <%= post.id %>: <%= post.title %> </h2>
+    <p class="post_num">Post No. <%= post.id %></p>
+    <h2 class="post_title"> <%= post.title %> </h2>
     <% if (show_full_post) %>
       <p class="post_text"><%= post.text %></p>
     <% else %>
       <p class="post_text"><%= truncate(post.text, length: 250, omission: "...") %></p>
     <% end %>
     <div class="post_stats">
-      <p>Comments: <%= post.comments_counter || 0 %></p>
-      <p>Likes: <%= post.likes_counter || 0 %></p>
+      <p class="comment_num">Comments: <%= post.comments_counter || 0 %></p>
+      <p class="like_num">Likes: <%= post.likes_counter || 0 %></p>
+      <%= link_to "View", user_post_path(user_id: post.author.id, id: post.id), class: "view_post" %>
     </div>
   </div>
 
