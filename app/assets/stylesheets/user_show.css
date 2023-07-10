@@ -4,26 +4,41 @@
 
 .single_users_container > div {
   width: 85%;
-  margin: 1rem auto 4rem auto;
+  margin: 0 auto 4rem auto;
+  flex-direction: column;
+  gap: 2rem;
+
 }
 
 .single_users_container .user_details_container {
   width: 100%;
   gap: 1rem;
-  flex-direction: row-reverse;
-  justify-content: flex-start;
+  /* flex-direction: row-reverse; */
+  justify-content: flex-end;
+  border-bottom: 1px solid #dbd5d58f;
+  padding-bottom: 1rem;
 }
 
 .single_user_headline {
   display: flex;
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
 }
 
 .user_bio {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #dbd5d58f;
+}
+.user_bio h3 {
+  font-size: 1rem;
+  color: var(--lapis-lazuli);
+}
+
+.user_bio p {
+  padding-top: 0.5rem;
+  font-style: italic;
 }
 
 .single_users_container .user_highlight {
