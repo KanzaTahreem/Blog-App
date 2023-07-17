@@ -26,6 +26,7 @@
   --pear: #BFDB38;
   --coral: #ff8551;
   --mountain-majesty: #9f73ab;
+  --golden-rod: #DAA624;
 }
 
 body {
@@ -77,4 +78,9 @@ header {
 
 header span {
   border: 1px solid lightgray;
+}
+
+img {
+  width: 24px;
+  height: 24px;
 }

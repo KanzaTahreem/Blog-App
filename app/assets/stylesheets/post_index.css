@@ -1,0 +1,12 @@
+.all_posts_container {
+  margin: 4rem auto;
+  background: white;
+  padding: 2rem;
+  box-shadow: 1px 1px 9px lightgray;
+  width: 65vw;
+}
+
+.all_posts_container .user_details_container {
+  width: 85%;
+  margin: 0 auto 4rem auto;
+}

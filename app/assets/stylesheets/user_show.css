@@ -10,7 +10,8 @@
 
 }
 
-.single_users_container .user_details_container {
+.single_users_container .user_details_container,
+.all_posts_container .user_details_container {
   width: 100%;
   gap: 1rem;
   /* flex-direction: row-reverse; */
@@ -41,27 +42,33 @@
   font-style: italic;
 }
 
-.single_users_container .user_highlight {
+.single_users_container .user_highlight,
+.all_posts_container .user_highlight {
   width: auto;
   flex: none;
 }
 
-.single_users_container .user_highlight > div {
+.single_users_container .user_highlight > div,
+.all_posts_container .user_highlight > div {
   flex: none
 }
 
 .single_users_container .user_img,
-.single_users_container .user_img img {
+.single_users_container .user_img img,
+.all_posts_container .user_img,
+.all_posts_container .user_img img {
   width: 3rem;
   height: 3rem;
 }
 
-.single_users_container .user_highlight h2 a {
+.single_users_container .user_highlight h2 a,
+.all_posts_container .user_highlight h2 a {
   font-size: 1rem;
   font-style: italic;
 }
 
-.single_users_container .user_highlight p {
+.single_users_container .user_highlight p,
+.all_posts_container .user_highlight p  {
   font-size: 0.7rem;
   font-style: italic;
 }

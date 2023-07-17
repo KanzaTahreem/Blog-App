@@ -9,6 +9,10 @@
 
   <div>
 
+    <!-- <button class="create_post">
+      <%= image_tag('icons/plus.svg', class: 'like-icon') %>
+      <%= link_to "Create Post", new_user_post_path(user_id: @user.id) %>
+    </button> -->
     <%= button_to "Create Post", new_user_post_path(user_id: @user.id), method: :get, class: "create_post" %>
 
     <% @recent_posts.each do |post| %>

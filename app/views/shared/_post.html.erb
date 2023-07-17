@@ -8,9 +8,9 @@
       <p class="post_text"><%= truncate(post.text, length: 250, omission: "...") %></p>
     <% end %>
     <div class="post_stats">
-      <p class="comment_num">Comments: <%= post.comments_counter || 0 %></p>
-      <p class="like_num">Likes: <%= post.likes_counter || 0 %></p>
-      <%= link_to "View", user_post_path(user_id: post.author.id, id: post.id), class: "view_post" %>
+      <p class="like_num"><%= image_tag('icons/like.svg', class: 'like-icon') %> Likes <span></span><%= post.likes_counter || 0 %></p>
+      <p class="comment_num"><%= image_tag('icons/comment.svg', class: 'comment-icon') %> Comments <span></span><%= post.comments_counter || 0 %></p>
+      <!-- <%= link_to "View", user_post_path(user_id: post.author.id, id: post.id), class: "view_post" %> -->
     </div>
   </div>
 
