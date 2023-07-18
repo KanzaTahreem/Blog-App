@@ -72,14 +72,14 @@
 
 
 
-.btn {
+/* .btn {
   display: flex;
   border: 3px solid;
   padding: 1em 2.5em;
   box-shadow: 3px 3px;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .btn a {
   font-size: 1.2em;
