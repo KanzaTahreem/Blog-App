@@ -29,7 +29,8 @@ class CommentsController < ApplicationController
     authorize! :update, @comment
 
     if @comment.update(comment_params)
-      redirect_to user_post_path(user_id: @comment.post.author.id, id: @comment.post.id), notice: 'Comment updated successfully'
+      redirect_to user_post_path(user_id: @comment.post.author.id, id: @comment.post.id),
+                  notice: 'Comment updated successfully'
     else
       flash.now[:alert] = @comment.errors.full_messages.first if @comment.errors.any?
       render :edit, status: 400
