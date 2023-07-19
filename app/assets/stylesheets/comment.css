@@ -1,4 +1,5 @@
-.new_comment_container {
+.new_comment_container,
+.edit_comment_container {
   margin: 4rem auto;
   background: white;
   padding: 2rem;
@@ -6,11 +7,9 @@
   width: 65vw;
 }
 
-.new_comment_container > div {
+.new_comment_container > div,
+.edit_comment_container > div {
   width: 85%;
   margin: 0 auto;
 }
 
-.new_comment_container form {
-  gap: 2rem;
-}

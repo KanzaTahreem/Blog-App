@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   load_and_authorize_resource
 
-  before_action :set_post, only: %i[new create]
+  before_action :set_post, only: %i[new create update]
 
   def new
     @comment = Comment.new
@@ -17,6 +17,22 @@ class CommentsController < ApplicationController
     else
       flash.now[:alert] = @comment.errors.full_messages.first if @comment.errors.any?
       render :new, status: 400
+    end
+  end
+
+  def edit
+    @comment = Comment.find(params[:id])
+  end
+
+  def update
+    @comment = Comment.find(params[:id])
+    authorize! :update, @comment
+
+    if @comment.update(comment_params)
+      redirect_to user_post_path(user_id: @comment.post.author.id, id: @comment.post.id), notice: 'Comment updated successfully'
+    else
+      flash.now[:alert] = @comment.errors.full_messages.first if @comment.errors.any?
+      render :edit, status: 400
     end
   end
 

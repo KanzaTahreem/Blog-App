@@ -1,0 +1,8 @@
+<section class="edit_comment_container">
+  <div>
+    <%= form_with model: @comment, url: user_post_comment_path, local: true  do |f| %>
+      <%= f.text_field :text, class: "comment_field", placeholder: "Edit your comment" %>
+      <%= f.submit 'Update Comment', class: "submit_btn" %>
+    <% end %>
+  </div>
+</section>
