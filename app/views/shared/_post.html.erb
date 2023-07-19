@@ -1,19 +1,27 @@
 <%= link_to user_post_path(user_id: post.author.id, id: post.id), class: "post_partial" do %>
   <div class="post_details_container">
-    <h2 class="post_title"> Post # <%= post.id %>: <%= post.title %> </h2>
+    <p class="post_num">Post No. <%= post.id %></p>
+    <h2 class="post_title"> <%= post.title %> </h2>
     <% if (show_full_post) %>
       <p class="post_text"><%= post.text %></p>
     <% else %>
       <p class="post_text"><%= truncate(post.text, length: 250, omission: "...") %></p>
     <% end %>
     <div class="post_stats">
-      <p>Comments: <%= post.comments_counter || 0 %></p>
-      <p>Likes: <%= post.likes_counter || 0 %></p>
+      <p class="like_num"><%= image_tag('icons/like.svg', class: 'like-icon') %> Likes <span></span><%= post.likes_counter || 0 %></p>
+      <p class="comment_num"><%= image_tag('icons/comment.svg', class: 'comment-icon') %> Comments <span></span><%= post.comments_counter || 0 %></p>
+      <% if controller_name == 'posts' && action_name == 'index' %>
+        <button type="button" class="view_post">
+          <%= image_tag('icons/eye.svg', class: 'eye-icon') %>
+          <%= link_to "View", user_posts_path(user_id: post.author.id), class: "view_post" %>
+        </button>
+      <% end %>
+      <% if can? :delete, @post %>
+        <button type="button" class="view_post">
+          <%= image_tag('icons/trash.svg', class: 'trash_icon') %>
+          <%= link_to "Delete", user_post_path(user_id: @post.author.id, id: @post.id), data: { turbo_method: :delete } %>
+        </button>
+      <% end %>
     </div>
   </div>
-
-  <% if can? :delete, @post %>
-    <button type="button" class="delete_btn btn"><%= link_to "Delete Post", user_post_path(user_id: @post.author.id, id: @post.id), data: { turbo_method: :delete } %></button>
-  <% end %>
-
 <% end %>

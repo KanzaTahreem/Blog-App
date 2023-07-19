@@ -1,0 +1,82 @@
+.all_users_container,
+.single_users_container {
+  margin: 4rem auto;
+  background: white;
+  padding: 2rem;
+  box-shadow: 1px 1px 9px lightgray;
+}
+
+.all_users_container {
+  width: 60vw;
+}
+
+.all_users_container > div {
+  display: grid;
+  gap: 2em;
+  margin: auto;
+}
+
+.user_details_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85%;
+  margin: auto;
+  gap: 3rem;
+  border-bottom: 1px solid #dbd5d58f;
+  padding-bottom: 1.5rem;
+}
+
+.user_img {
+  text-align: center;
+  display: flex;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  justify-content: center;
+}
+
+.user_img img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.user_highlight {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.user_highlight > div {
+  flex: 3;
+}
+
+.user_highlight h2 a {
+  font-size: inherit;
+  text-transform: capitalize;
+  color: var(--lapis-lazuli);
+}
+
+.view_user {
+  background: var(--golden-rod);
+  padding: 0.5rem 2rem;
+  border-radius: 6px;
+  color: var(--alice-blue);
+}
+
+.view_user:hover,
+.view_all:hover,
+.back_btn:hover,
+.submit_btn:hover,
+.add_like:hover,
+.add_comment:hover {
+  box-shadow: 5px 6px 20px rgb(218 166 36 / 20%), 2px 5px 10px rgb(218 166 36 / 25%);
+}
+
+.btn_container {
+  display: flex;
+  gap: 0.5rem;
+}

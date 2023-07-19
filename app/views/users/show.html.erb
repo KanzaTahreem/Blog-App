@@ -1,18 +1,20 @@
 <section class="single_users_container">
-  <%= render partial: "shared/user", locals: { user: @user } %>
-
-  <div class="user_bio">
-    <h3>Bio</h3>
-    <p><%= @user.bio %></p>
+  <div class="single_user_headline">
+    <%= render partial: "shared/user", locals: { user: @user } %>
+    <div class="user_bio">
+      <h3>Profile Description</h3>
+      <p><%= @user.bio %></p>
+    </div>
   </div>
 
-  <% @recent_posts.each do |post| %>
-    <%= render partial: 'shared/post', locals: { post: post, show_full_post: false } %>
-  <% end %>
-
-  <div class="btn_container">
-    <button type="button" class="back_btn btn"><%= link_to "Go back to users", users_path %></button>
-    <button type="button" class="btn"><%= link_to "See all Posts", user_posts_path(user_id: @user.id) %></button> 
-    <button type="button" class="create_post_btn btn"><%= link_to "Create Post", new_user_post_path(user_id: @user.id) %></button>
+  <div>
+    <%= button_to "Create Post", new_user_post_path(user_id: @user.id), method: :get, class: "create_post" %>
+    <% @recent_posts.each do |post| %>
+      <%= render partial: 'shared/post', locals: { post: post, show_full_post: false } %>
+    <% end %>
+    <div class="btn_container">
+      <%= button_to "Back", users_path, method: :get, class: "back_btn" %>
+      <%= button_to "All posts", user_posts_path(user_id: @user.id), method: :get, class: "view_all" %>
+    </div>
   </div>
-</section> 
+</section>

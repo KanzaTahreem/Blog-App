@@ -1,17 +1,14 @@
-.new_comment_container {
-  display: flex;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
+.new_comment_container,
+.edit_comment_container {
+  margin: 4rem auto;
+  background: white;
+  padding: 2rem;
+  box-shadow: 1px 1px 9px lightgray;
+  width: 65vw;
 }
 
-.comment_field {
-  padding: 1em;
-  width: 50vw;
-  height: 10vh;
-  border: 3px solid;
-}
-
-.comment_field::placeholder {
-  padding: 1em;
+.new_comment_container > div,
+.edit_comment_container > div {
+  width: 85%;
+  margin: 0 auto;
 }

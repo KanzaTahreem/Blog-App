@@ -1,15 +1,34 @@
 <%= render partial: "shared/error" %>
 <section class="full_post_container">
-  <%= render partial: "shared/like", locals: { like: Like.new, post_id: @post.id, user_id: @post.author.id } %>
-  <%= render partial: 'shared/post', locals: { post: @post, show_full_post: true } %>
-  <div class="full_comments_container">
-    <% @post.comments.each do |comment| %>
-      <%= render partial: 'shared/comment', locals: { comment: comment } %>
-      <% if can? :delete, comment %>
-      <button type="button" class="delete_btn btn"><%= link_to "Delete Comment", user_post_comment_path(user_id: comment.author.id, post_id: comment.post.id, id: comment.id), data: { turbo_method: :delete } %></button>
-    <% end %>
-    <% end %>
+  <div>
+    <div class="btn_container">
+      <%= render partial: "shared/like", locals: { like: Like.new, post_id: @post.id, user_id: @post.author.id } %>
+      <%= button_to "Comment", new_user_post_comment_path(user_id: @post.author.id, post_id: @post.id), method: :get, class: "add_comment" %>
+    </div>
+    <%= render partial: 'shared/post', locals: { post: @post, show_full_post: true } %>
+    <div class="full_comments_container">
+      <% @post.comments.each do |comment| %>
+        <div>
+          <%= render partial: 'shared/comment', locals: { comment: comment } %>
+          <div class="comment_btn_container">
+            <% if can? :update, comment %>
+              <%= link_to edit_user_post_comment_path(user_id: comment.author.id, post_id: comment.post.id, id: comment.id) do %>
+                <%= image_tag('icons/edit.svg', class: 'edit-icon') %>
+              <% end %>
+            <% else %>
+                <%= image_tag('icons/edit.svg', class: 'edit-icon disabled') %>
+            <% end %>
+
+            <% if can? :delete, comment %>
+              <%= link_to user_post_comment_path(user_id: comment.author.id, post_id: comment.post.id, id: comment.id), data: { turbo_method: :delete } do %>
+                <%= image_tag('icons/cross.svg', class: 'edit-icon') %>
+              <% end %>
+              <% else %>
+                <%= image_tag('icons/cross.svg', class: 'delete-icon disabled') %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
-  <button type="button" class="create_post_btn btn"><%= link_to "Add a new comment", new_user_post_comment_path(user_id: @post.author.id, post_id: @post.id) %></button>
-  <button type="button" class="back_btn btn"><%= link_to "Go back to posts page", user_posts_path(@user) %></button>
 </section>

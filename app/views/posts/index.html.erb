@@ -1,14 +1,43 @@
 <%= render partial: "shared/error" %>
 <section class="all_posts_container">
   <%= render partial: "shared/user", locals: {user: @user || "No users found"} %>
-  <% @posts.each do |post| %>
-  <%= render partial: 'shared/post', locals: { post: post, show_full_post: false } %>
-  <div class="recent_comments_container">
-    <% post.recent_comments.each do |comment| %>
-      <%= render partial: 'shared/comment', locals: { comment: comment } %>
+  <div class="latest_posts">
+    <% @posts.each do |post| %>
+      <div>
+        <%= render partial: 'shared/post', locals: { post: post, show_full_post: false } %>
+        <% if post.recent_comments.any? %>
+          <div class="recent_comments_container">
+            <button type="button" class="btn view_comments_btn" data-post-id="<%= post.id %>">
+              View Comments (<%= post.recent_comments.count %>)
+            </button>
+            <div class="comments_container" id="comments_container_<%= post.id %>" style="display: none;">
+              <% post.recent_comments.each do |comment| %>
+                <%= render partial: 'shared/comment', locals: { comment: comment } %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
     <% end %>
   </div>
-  <% end %>
-  <button type="button" class="btn">Pagination</button> 
-  <button type="button" class="back_btn btn"><%= link_to "Go back to posts", user_path(id: @user.id) %></button>
+  <%= button_to "Back", user_path(id: @user.id), method: :get, class: "back_btn" %>
 </section>
+
+<script>
+  document.querySelectorAll('.view_comments_btn').forEach(function(button) {
+    let postId = button.getAttribute('data-post-id');
+    let commentsContainer = document.getElementById('comments_container_' + postId);
+    let commentCount = commentsContainer.childElementCount;
+    button.textContent = 'View Comments (' + commentCount + ')';
+
+    button.addEventListener('click', function() {
+      if (commentsContainer.style.display === 'none') {
+        commentsContainer.style.display = 'flex';
+        this.textContent = 'Hide Comments (' + commentCount + ')';
+      } else {
+        commentsContainer.style.display = 'none';
+        this.textContent = 'View Comments (' + commentCount + ')';
+      }
+    });
+  });
+</script>

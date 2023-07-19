@@ -7,7 +7,14 @@
     <% end %>
   </div>
   <div class="user_highlight">
-    <h2><%= link_to  user.name, user_path(user) %></h2>
-    <p>Number of posts: <%= user.posts_counter || 0 %></p>
+    <div>
+      <h2><%= link_to  user.name, user_path(user) %></h2>
+      <p>Total posts: <%= user.posts_counter || 0 %></p>
+    </div>
+    <% if current_page?(users_path) %>
+      <button>
+        <%= link_to "View", user_path(user), class: "view_user" %>
+      </button>
+    <% end %>
   </div>
 </div>

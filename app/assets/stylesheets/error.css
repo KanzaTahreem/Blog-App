@@ -1,9 +1,45 @@
-.flash-notice {
-  opacity: 0;
-  animation: fadeout 5s;
+.alert,
+.notice,
+.flash-notice,
+.flash_alert {
+  padding: 10px;
+  border-radius: 6px;
+  letter-spacing: 0.8px;
+  color: var(--poseidon);
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 10px auto;
 }
 
-@keyframes fadeout {
-  from { opacity: 1; }
-  to { opacity: 0; }
+.notice,
+.flash-notice {
+  background: var(--tea-green);
+}
+
+.alert,
+.flash-alert {
+  background: var(--spanish-pink);
+}
+
+#error_explanation {
+  background: var(--spanish-pink);
+  padding: 10px;
+  border-radius: 6px;
+}
+
+#error_explanation h3 {
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+#error_explanation ul {
+  padding: 0 1rem;
+}
+
+#error_explanation li {
+  font-size: 0.7rem;
+}
+
+.field_with_errors {
+  width: 100%;
 }

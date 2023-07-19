@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -6,11 +9,86 @@
   padding: 0;
 }
 
-a {
+:root {
+  --eagle-green: #164b60;
+  --lapis-lazuli: #1f6e8c;
+  --sea-serpent: #4fc0d0;
+  --alice-blue: #f9edec;
+  --poseidon: #133955;
+  --azure: #068fff;
+  --mantis: #82cc6b;
+  --crimson: #a51c30;
+  --spanish-pink: #fcc2c287;
+  --tea-green: #d0f5be;
+  --timber-wolf: #dbd5d53d;
+  --orange-yellow: #ffc95f;
+  --cambridge-blue: #aac8a7;
+  --pear: #bfdb38;
+  --coral: #ff8551;
+  --mountain-majesty: #9f73ab;
+  --golden-rod: #daa624;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  color: var(--eagle-green);
+  background: var(--timber-wolf);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--poseidon);
+}
+
+p,
+a,
+ul,
+li {
   color: inherit;
+  font-size: 0.8rem;
+}
+
+a {
   text-decoration: none;
 }
 
-a:active {
-  color: inherit;
+button {
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  color: var(--alice-blue);
+}
+
+button:hover,
+.submit_btn:hover,
+.add_like:hover,
+.add_comment:hover {
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  justify-content: center;
+  background: white;
+  box-shadow: 1px 1px 9px lightgray;
+}
+
+header span {
+  border: 1px solid lightgray;
+}
+
+img {
+  width: 24px;
+  height: 24px;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,25 +8,32 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "user", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "post", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "comment", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "error", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "login", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "user_index", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "user_show", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "post_index", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "post_show", "data-turbo-track": "reload" %>
 
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
     <div class="app">
-      <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+      <header>
+        <% if user_signed_in? %>
+          <%= link_to "All users", users_path %>
+          <span></span>
+          <%=  link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete } %>
+          <span></span>
+          <p><%= current_user.name %></p>
+        <% end %>
+      </header>
 
-      <% if user_signed_in? %>
-        <%=  link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete } %>
-      <% end %>
-       
       <%= yield %>
     </div>
   </body>
 </html>
+
+
