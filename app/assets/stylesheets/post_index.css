@@ -77,7 +77,6 @@
   gap: 1rem;
   display: flex;
   align-self: flex-end;
-  /* width: 250px; */
   align-items: center;
 }
 
@@ -85,4 +84,14 @@
   align-items: center;
   display: flex;
   gap: 1rem;
+}
+
+.view_all {
+  background: var(--golden-rod);
+  padding: 0.5rem 1rem;
+}
+
+.comment_details_container {
+  gap: 1em;
+  display: flex;
 }

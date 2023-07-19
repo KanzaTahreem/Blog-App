@@ -13,7 +13,6 @@
 .all_posts_container .user_details_container {
   width: 100%;
   gap: 1rem;
-  /* flex-direction: row-reverse; */
   justify-content: flex-end;
   border-bottom: 1px solid #dbd5d58f;
   padding-bottom: 1rem;
@@ -21,7 +20,6 @@
 
 .single_user_headline {
   display: flex;
-  /* flex-direction: row-reverse; */
 }
 
 .user_bio {
@@ -70,4 +68,92 @@
 .all_posts_container .user_highlight p  {
   font-size: 0.7rem;
   font-style: italic;
+}
+
+.create_post {
+  background: var(--mantis);
+  padding: 0.5rem 1rem;
+  align-self: flex-end;
+}
+
+.create_post:hover {
+  box-shadow: 5px 6px 28px rgb(130 204 107 / 10%), 2px 5px 10px rgb(130 204 107 / 25%);
+}
+
+.post_num {
+  font-style: italic;
+  color: #c5bfbf;
+  font-size: 0.7rem;
+}
+
+.post_title {
+  color: #1976c3;
+  padding-bottom: 0.75rem;
+}
+
+.post_text {
+  border-bottom: 1px solid #dbd5d58f;
+  padding-bottom: 1rem;
+}
+
+.like_num,
+.comment_num {
+  padding: 0.3rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0;
+  flex: 1
+}
+
+.new_post_container {
+  margin: 4rem auto;
+  background: white;
+  padding: 2rem;
+  box-shadow: 1px 1px 9px lightgray;
+  width: 65vw;
+}
+
+.new_post_container > div {
+  width: 85%;
+  margin: 0 auto;
+}
+
+form {
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form_title,
+.form_text,
+.comment_field {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--golden-rod);
+  border-radius: 6px;
+  outline: none;
+  letter-spacing: 1px;
+}
+
+.form_text {
+  height: 10vh;
+}
+
+.form_title::placeholder,
+.form_text::placeholder,
+.comment_field::placeholder {
+  font-family: "Poppins";
+  letter-spacing: 1px;
+}
+
+.submit_btn {
+  background: var(--golden-rod);
+  border: navajowhite;
+  color: var(--alice-blue);
+  padding: 0.5rem 1rem;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  align-self: flex-end;
 }

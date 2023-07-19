@@ -10,7 +10,6 @@
   width: 60vw;
 }
 
-
 .all_users_container > div {
   display: grid;
   gap: 2em;
@@ -35,7 +34,6 @@
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  /* flex: 0.5; */
   justify-content: center;
 }
 
@@ -49,9 +47,7 @@
   width: 100%;
   height: 100%;
   display: flex;
-  /* padding: 1rem; */
   align-items: center;
-  /* gap: 2rem; */
   flex: 1;
 }
 
@@ -72,24 +68,7 @@
   color: var(--alice-blue);
 }
 
-
-
-/* .btn {
-  display: flex;
-  border: 3px solid;
-  padding: 1em 2.5em;
-  box-shadow: 3px 3px;
-  align-items: center;
-  justify-content: center;
-} */
-
-/* .btn a {
-  font-size: 1.2em;
-  font-weight: 700;
-} */
-
 .btn_container {
   display: flex;
   gap: 0.5rem;
-  /* justify-content: flex-s; */
 }

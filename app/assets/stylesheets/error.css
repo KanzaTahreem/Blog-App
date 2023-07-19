@@ -1,16 +1,7 @@
-
-.flash-notice {
-  opacity: 0;
-  animation: fadeout 5s;
-}
-
-@keyframes fadeout {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-
 .alert,
-.notice {
+.notice,
+.flash-notice,
+.flash_alert {
   padding: 10px;
   border-radius: 6px;
   letter-spacing: 0.8px;
@@ -20,13 +11,16 @@
   margin: 10px auto;
 }
 
-.alert {
+.notice,
+.flash-notice {
+  background: var(--tea-green);
+}
+
+.alert,
+.flash-alert {
   background: var(--spanish-pink);
 }
 
-.notice {
-  background: var(--tea-green);
-}
 
 #error_explanation {
   background: var(--spanish-pink);
@@ -45,4 +39,8 @@
 
 #error_explanation li {
   font-size: 0.7rem;
+}
+
+.field_with_errors {
+  width: 100%
 }

@@ -11,7 +11,6 @@
   margin: 0 auto 2rem auto;
 }
 
-
 .add_like,
 .add_comment {
   background: var(--golden-rod);
@@ -60,4 +59,9 @@
   width: 80%;
   font-style: italic;
   color: gray;
+}
+
+.trash_icon {
+  width: 22px;
+  height: 22px;
 }

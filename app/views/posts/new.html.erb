@@ -1,8 +1,10 @@
 <%= render partial: "shared/error" %>
 <section class="new_post_container">
-  <%= form_with model: @post, url: user_posts_path, local: true do |form| %>
-    <%= form.text_field :title, class: "form_title", placeholder: "Enter a title here" %>
-    <%= form.text_area :text, class: "form_text", placeholder: "Enter a text here" %>
-    <%= form.submit "Submit", class: "submit-btn btn" %>
-  <% end %>
+  <div>
+    <%= form_with model: @post, url: user_posts_path, local: true do |form| %>
+      <%= form.text_field :title, class: "form_title", placeholder: "Enter your title here" %>
+      <%= form.text_area :text, class: "form_text", placeholder: "Enter your text here" %>
+      <%= form.submit "Add post", class: "submit_btn" %>
+    <% end %>
+  </div>
 </section>

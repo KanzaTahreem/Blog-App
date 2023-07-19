@@ -14,21 +14,3 @@
 .new_comment_container form {
   gap: 2rem;
 }
-
-.comment_field {
-  width: 100%;
-  padding: 1rem;
-  border: 1px solid var(--golden-rod);
-  border-radius: 6px;
-  outline: none;
-}
-
-.submit_btn {
-  background: var(--golden-rod);
-  border: navajowhite;
-  color: var(--alice-blue);
-  padding: 0.5rem 1rem;
-  letter-spacing: 1px;
-  border-radius: 6px;
-  align-self: flex-end;
-}

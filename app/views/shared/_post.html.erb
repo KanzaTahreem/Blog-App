@@ -10,16 +10,18 @@
     <div class="post_stats">
       <p class="like_num"><%= image_tag('icons/like.svg', class: 'like-icon') %> Likes <span></span><%= post.likes_counter || 0 %></p>
       <p class="comment_num"><%= image_tag('icons/comment.svg', class: 'comment-icon') %> Comments <span></span><%= post.comments_counter || 0 %></p>
-      <!-- <%= link_to "View", user_post_path(user_id: post.author.id, id: post.id), class: "view_post" %> -->
-      <button type="button" class="view_post">
-        <%= image_tag('icons/eye.svg', class: 'eye-icon') %>
-        <%= link_to "View", user_post_path(user_id: post.author.id, id: post.id), class: "view_post" %>
-      </button>
+      <% if controller_name == 'posts' && action_name == 'index' %>
+        <button type="button" class="view_post">
+          <%= image_tag('icons/eye.svg', class: 'eye-icon') %>
+          <%= link_to "View", user_posts_path(user_id: post.author.id), class: "view_post" %>
+        </button>
+      <% end %>
+      <% if can? :delete, @post %>
+        <button type="button" class="view_post">
+          <%= image_tag('icons/trash.svg', class: 'trash_icon') %>
+          <%= link_to "Delete", user_post_path(user_id: @post.author.id, id: @post.id), data: { turbo_method: :delete } %>
+        </button>
+      <% end %>
     </div>
   </div>
-
-  <% if can? :delete, @post %>
-    <button type="button" class="delete_btn btn"><%= link_to "Delete Post", user_post_path(user_id: @post.author.id, id: @post.id), data: { turbo_method: :delete } %></button>
-  <% end %>
-
 <% end %>
