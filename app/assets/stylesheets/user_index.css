@@ -68,6 +68,15 @@
   color: var(--alice-blue);
 }
 
+.view_user:hover,
+.view_all:hover,
+.back_btn:hover,
+.submit_btn:hover,
+.add_like:hover,
+.add_comment:hover {
+  box-shadow: 5px 6px 20px rgb(218 166 36 / 20%), 2px 5px 10px rgb(218 166 36 / 25%);
+}
+
 .btn_container {
   display: flex;
   gap: 0.5rem;

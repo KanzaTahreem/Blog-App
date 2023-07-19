@@ -61,10 +61,6 @@
   align-self: flex-start;
 }
 
-.back_btn:hover {
-  box-shadow: 5px 6px 28px rgb(255 133 81 / 10%), 2px 5px 10px rgb(255 133 81 / 25%);
-}
-
 .view_post {
   display: flex;
   color: var(--eagle-green);
