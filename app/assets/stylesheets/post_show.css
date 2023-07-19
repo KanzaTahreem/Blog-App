@@ -6,6 +6,12 @@
   width: 65vw;
 }
 
+.full_post_container > div {
+  width: 85%;
+  margin: 0 auto 2rem auto;
+}
+
+
 .add_like,
 .add_comment {
   background: var(--golden-rod);

@@ -4,10 +4,9 @@
 
 .single_users_container > div {
   width: 85%;
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 2rem auto;
   flex-direction: column;
   gap: 2rem;
-
 }
 
 .single_users_container .user_details_container,

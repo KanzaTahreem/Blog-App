@@ -24,6 +24,8 @@
   width: 85%;
   margin: auto;
   gap: 3rem;
+  border-bottom: 1px solid #dbd5d58f;
+  padding-bottom: 1.5rem;
 }
 
 .user_img {
@@ -64,7 +66,7 @@
 }
 
 .view_user {
-  background: var(--lapis-lazuli);
+  background: var(--golden-rod);
   padding: 0.5rem 2rem;
   border-radius: 6px;
   color: var(--alice-blue);
@@ -81,10 +83,10 @@
   justify-content: center;
 } */
 
-.btn a {
+/* .btn a {
   font-size: 1.2em;
   font-weight: 700;
-}
+} */
 
 .btn_container {
   display: flex;
