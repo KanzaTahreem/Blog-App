@@ -21,7 +21,6 @@
   background: var(--spanish-pink);
 }
 
-
 #error_explanation {
   background: var(--spanish-pink);
   padding: 10px;
@@ -42,5 +41,5 @@
 }
 
 .field_with_errors {
-  width: 100%
+  width: 100%;
 }

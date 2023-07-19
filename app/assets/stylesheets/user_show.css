@@ -29,6 +29,7 @@
   padding-bottom: 1rem;
   border-bottom: 1px solid #dbd5d58f;
 }
+
 .user_bio h3 {
   font-size: 1rem;
   color: var(--lapis-lazuli);
@@ -39,6 +40,19 @@
   font-style: italic;
 }
 
+.new_post_container > div {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.new_post_container {
+  margin: 4rem auto;
+  background: white;
+  padding: 2rem;
+  box-shadow: 1px 1px 9px lightgray;
+  width: 65vw;
+}
+
 .single_users_container .user_highlight,
 .all_posts_container .user_highlight {
   width: auto;
@@ -47,7 +61,7 @@
 
 .single_users_container .user_highlight > div,
 .all_posts_container .user_highlight > div {
-  flex: none
+  flex: none;
 }
 
 .single_users_container .user_img,
@@ -65,7 +79,7 @@
 }
 
 .single_users_container .user_highlight p,
-.all_posts_container .user_highlight p  {
+.all_posts_container .user_highlight p {
   font-size: 0.7rem;
   font-style: italic;
 }
@@ -98,25 +112,11 @@
 
 .like_num,
 .comment_num {
-  padding: 0.3rem 0.75rem;
   display: flex;
   align-items: center;
   gap: 0.3rem;
   padding: 0;
-  flex: 1
-}
-
-.new_post_container {
-  margin: 4rem auto;
-  background: white;
-  padding: 2rem;
-  box-shadow: 1px 1px 9px lightgray;
-  width: 65vw;
-}
-
-.new_post_container > div {
-  width: 85%;
-  margin: 0 auto;
+  flex: 1;
 }
 
 form {
@@ -144,7 +144,7 @@ form {
 .form_title::placeholder,
 .form_text::placeholder,
 .comment_field::placeholder {
-  font-family: "Poppins";
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
 }
 

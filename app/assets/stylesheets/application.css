@@ -11,29 +11,29 @@
 
 :root {
   --eagle-green: #164b60;
-  --lapis-lazuli: #1F6E8C;
+  --lapis-lazuli: #1f6e8c;
   --sea-serpent: #4fc0d0;
-  --alice-blue: #F9EDEC;
+  --alice-blue: fF9edeC;
   --poseidon: #133955;
   --azure: #068fff;
-  --mantis: #82CC6B;
+  --mantis: #82cc6b;
   --crimson: #a51c30;
   --spanish-pink: #fcc2c287;
   --tea-green: #d0f5be;
   --timber-wolf: #dbd5d53d;
   --orange-yellow: #ffc95f;
   --cambridge-blue: #aac8a7;
-  --pear: #BFDB38;
+  --pear: #bfdB38;
   --coral: #ff8551;
   --mountain-majesty: #9f73ab;
-  --golden-rod: #DAA624;
+  --golden-rod: #daa624;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
   color: var(--eagle-green);
-  background: var(--timber-wolf)
+  background: var(--timber-wolf);
 }
 
 h1,

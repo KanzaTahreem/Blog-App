@@ -11,10 +11,6 @@
   margin: 0 auto 2rem auto;
 }
 
-.all_posts_container .post_details_container {
-  margin: 1rem 0;
-}
-
 .post_details_container {
   gap: 0.5rem;
   display: flex;
@@ -24,6 +20,10 @@
   border: 1px solid lightgray;
   background: var(--timber-wolf);
   padding: 1rem;
+}
+
+.all_posts_container .post_details_container {
+  margin: 1rem 0;
 }
 
 .latest_posts {
@@ -42,7 +42,7 @@
 }
 
 .view_comments_btn {
-   color: var(--golden-rod);
+  color: var(--golden-rod);
 }
 
 .comments_container {
@@ -66,7 +66,7 @@
   color: var(--eagle-green);
   align-items: center;
   gap: 0.3rem;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
 }
 
 .post_stats {

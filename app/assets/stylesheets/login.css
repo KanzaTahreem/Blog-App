@@ -9,14 +9,12 @@
   justify-content: center;
 }
 
-.container form,
 .container form {
   align-items: center;
   width: 100%;
   gap: 1rem;
 }
 
-.container > div ,
 .container > div {
   width: 54%;
   margin: 0 auto;
@@ -28,12 +26,10 @@
   text-decoration: underline;
 }
 
-.container input::placeholder,
 .container input::placeholder {
   letter-spacing: 1px;
 }
 
-.container input,
 .container input {
   padding: 10px;
   border-radius: 6px;
@@ -41,7 +37,6 @@
   border: 1px solid lightgray;
 }
 
-.container input:focus,
 .container input:focus {
   border: 1px solid var(--lapis-lazuli);
 }
@@ -63,15 +58,12 @@
   box-shadow: 5px 6px 28px rgb(31 110 140 / 10%), 2px 5px 10px rgb(31 110 140 / 25%);
 }
 
-
-.container .new_user div,
-.container .new_user div  {
+.container .new_user div {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.container h2,
 .container h2 {
   font-size: 2.3rem;
   font-weight: 600;
@@ -91,6 +83,5 @@ form > .actions {
 }
 
 .sign_up_container label {
-  display: none;;
+  display: none;
 }
-
